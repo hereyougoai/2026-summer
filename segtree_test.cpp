@@ -31,7 +31,6 @@ struct SegTree {
         //   1. 若 lazy[node] 為假，直接返回
         //   2. 把 val[node] 複製給 2*node 與 2*node+1，並把它們的 lazy 設為真
         //   3. 清掉 lazy[node]
-        (void)node;
     }
 
     // 內部遞迴：node 負責 [l, r)，要把 [ql, qr) 設成 c。
@@ -40,7 +39,6 @@ struct SegTree {
         //   1. 不相交（qr <= l 或 r <= ql）→ 返回
         //   2. 完整包含（ql <= l 且 r <= qr）→ 設 val 與 lazy，返回（不要往下走）
         //   3. 其餘 → pushDown 之後遞迴左右兩邊
-        (void)node; (void)l; (void)r; (void)ql; (void)qr; (void)c;
     }
 
     // 內部遞迴：node 負責 [l, r)，查第 pos 格。
@@ -48,7 +46,6 @@ struct SegTree {
         // TODO: 實作單點查詢
         //   1. 走到葉子（r - l == 1）→ 回傳 val[node]
         //   2. 否則 pushDown，再依 pos 與 mid 的關係往左或往右
-        (void)node; (void)l; (void)r; (void)pos;
         return 0;
     }
 
